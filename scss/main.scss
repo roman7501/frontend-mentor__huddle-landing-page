@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  display: inline-block;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #00252e;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.container {
+  width: 1280px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.btn {
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.0954201);
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-primary {
+  background-color: hsl(322, 100%, 66%);
+  color: #fff;
+}
+
+.btn-primary-big {
+  padding: 25px 100px;
+}
+
+.btn-primary-small {
+  font-size: 14px;
+  padding: 17px 70px;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  padding: 13px 65px;
+}
+
+.hero {
+  background-image: url("../images/bg-hero-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: hsl(193, 100%, 96%);
+  height: 92vh;
+  padding: 68px 0;
+  margin-bottom: 160px;
+  .hero__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 71px;
+    .hero__logo {
+      width: 200px;
+    }
+  }
+  .hero__content {
+    display: flex;
+    align-items: center;
+    .hero__left {
+      max-width: 640px;
+      padding-right: 70px;
+      margin-top: -30px;
+      p {
+        margin-bottom: 49px;
+      }
+    }
+  }
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  margin-bottom: 40px;
+  height: 440px;
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .feature__desc {
+    flex: 0.8;
+    padding: 151px 120px;
+    h3 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 27px;
+      color: #808e9a;
+    }
+  }
+  .feature__illus {
+    flex: 0.7;
+    padding: 50px 25px;
+    width: 440px;
+  }
+}
+
+.cta {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+  padding: 56px 0;
+  border-radius: 15px;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.07);
+  transform: translateY(30%);
+  z-index: 1;
+  background-color: #fff;
+  h2 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+}
+
+footer {
+  background: #00252e;
+  color: #fff;
+  font-size: 14px;
+  .footer__icon {
+    width: 24px;
+  }
+  .footer__container-grid {
+    max-width: 1240px;
+    padding-top: 130px;
+    margin-left: 10vw;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 2.5fr;
+    grid-template-rows: 5;
+    grid-template-areas:
+      "logo . . . . "
+      "location . about career social"
+      "location . do blog ."
+      "phone . faq contact ."
+      "mail . . . copyright";
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    p {
+      margin: 0;
+      line-height: 24px;
+    }
+    .footer__links:hover {
+      text-decoration: underline;
+    }
+    .footer__logo {
+      grid-area: logo;
+      width: 152px;
+      margin-bottom: 32px;
+    }
+    .footer__location {
+      grid-area: location;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      img {
+        margin-right: 16px;
+      }
+    }
+    .footer__phone {
+      grid-area: phone;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+
+      img {
+        margin-right: 16px;
+      }
+    }
+    .footer__mail {
+      grid-area: mail;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 64px;
+      img {
+        margin-right: 16px;
+      }
+    }
+    .footer__about {
+      grid-area: about;
+    }
+    .footer__do {
+      margin-bottom: 16px;
+      grid-area: do;
+    }
+    .footer__faq {
+      grid-area: faq;
+    }
+    .footer__career {
+      grid-area: career;
+    }
+    .footer__blog {
+      grid-area: blog;
+    }
+    .footer__contact {
+      grid-area: contact;
+    }
+    .footer__social {
+      grid-area: social;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        margin-right: 16px;
+        border: 1px solid #fff;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+          color: hsl(322, 100%, 66%);
+          border-color: hsl(322, 100%, 66%);
+        }
+      }
+    }
+    .footer__copyright {
+      font-size: 12px;
+      grid-area: copyright;
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  body {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+  .container {
+    padding: 0 20px;
+  }
+
+  .btn-primary-big {
+    font-size: 10px;
+    padding: 12.5px 50px;
+  }
+  .btn-primary-small {
+    font-size: 12px;
+    padding: 10px 60px;
+  }
+
+  .btn-secondary {
+    padding: 4px 22px;
+    font-size: 10px;
+  }
+  .hero {
+    height: auto;
+    .hero__top {
+      align-items: center;
+      .hero__logo {
+        width: 104px;
+      }
+    }
+    .hero__content {
+      flex-direction: column;
+      .hero__left {
+        padding-right: unset;
+        margin-bottom: 56px;
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .feature {
+    &:nth-child(even) {
+      flex-direction: column-reverse;
+    }
+    &:nth-child(odd) {
+      flex-direction: column-reverse;
+    }
+    height: auto;
+    .feature__desc {
+      padding: 40px;
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+    .feature__illus {
+      width: unset;
+    }
+  }
+
+  .cta {
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  footer {
+    .footer__container-grid {
+      margin-left: unset;
+      margin: 0 16px;
+      padding-top: 150px;
+      font-size: 14px;
+      text-align: left;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(12);
+      grid-template-areas:
+        "logo"
+        "location"
+        "phone"
+        "mail"
+        "about"
+        "do"
+        "faq"
+        "career"
+        "blog"
+        "contact"
+        "social"
+        "copyright";
+      .footer__about,
+      .footer__do,
+      .footer__faq,
+      .footer__career,
+      .footer__blog,
+      .footer__contact {
+        margin-bottom: 16px;
+      }
+      .footer__social {
+        margin: 24px 0;
+      }
+      .footer__copyright {
+        text-align: center;
+      }
+    }
+  }
+}
